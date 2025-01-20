@@ -65,16 +65,16 @@ O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e a
 <br><br>
 Usando um modelo de RandomForest para identificar a importância das variáveis.
 O gráfico apresenta a evolução ao longo do tempo de cinco colunas selecionadas, representando diferentes categorias de despesas contábeis. A análise do gráfico sugere os seguintes pontos:
- -	Tendências Gerais:
+  -	Tendências Gerais:
 Algumas despesas, como as representadas pelas colunas 311110107 e 362110101, mostram um crescimento acentuado nos últimos meses, indicando picos de gastos significativos.
 Outras categorias, como 332210105, apresentam flutuações mais sutis ao longo do período, mas ainda mostram variações pontuais.
 
- -	Picos e Anomalias:
+  -	Picos e Anomalias:
 Há aumentos repentinos em algumas colunas, como no caso de 362110101 e 311110107, especialmente nos meses finais. Esses picos podem ser indicativos de eventos extraordinários ou despesas atípicas que impactaram o total.
 
- - Estabilidade em Algumas Categorias:
+  - Estabilidade em Algumas Categorias:
 Despesas como as representadas por 313110114 permanecem relativamente constantes ao longo do tempo, sugerindo que essas categorias têm um comportamento mais previsível.
- -	Comparação Entre Categorias:
+  -	Comparação Entre Categorias:
 Algumas categorias possuem valores muito mais altos em comparação a outras, indicando que essas despesas têm maior peso no total geral.
 <br><br>
 ![image](https://github.com/user-attachments/assets/9fa16376-6a12-4634-8e45-e99b45cf5fdb)
@@ -111,7 +111,7 @@ Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis
 
 ---
 
-Matrícula: 123.456.789
+Matrícula: 222.100.15
 
 Pontifícia Universidade Católica do Rio de Janeiro
 
