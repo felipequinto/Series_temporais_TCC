@@ -17,7 +17,10 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-Este projeto teve como objetivo principal analisar e desenvolver um modelo de machine learning para prever despesas de uma empresa. O conjunto de dados utilizado contém 27 meses de despesas, apresentando um desafio adicional devido ao seu pequeno volume e à presença de outliers. O estudo explorou as etapas fundamentais de preparação dos dados, seleção de features e avaliação de modelos, com foco em entender como técnicas de machine learning se comportam em cenários com limitações de dados históricos e irregularidades.
+Este projeto teve como objetivo principal analisar e desenvolver um modelo de machine learning para prever despesas de uma empresa. O conjunto de dados utilizado contém 27 meses de despesas, apresentando um desafio adicional devido ao seu pequeno volume e à presença de outliers.
+
+O estudo explorou as etapas fundamentais de preparação dos dados, seleção de features e avaliação de modelos, com foco em entender como técnicas de machine learning se comportam em cenários com limitações de dados históricos e irregularidades.
+
 Os resultados do modelo foram analisados considerando métricas preditivas e a capacidade de lidar com padrões atípicos nos dados, contribuindo para o entendimento das possibilidades e limitações da aplicação de algoritmos preditivos em contextos semelhantes.
 
 Este repositório contém o código desenvolvido, os insights obtidos e as visualizações utilizadas para interpretação dos resultados..
