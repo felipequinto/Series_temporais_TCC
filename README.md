@@ -53,28 +53,28 @@ Cada despesa possui um respectivo número contábil, que foi utilizado para cria
 <br><br>
 O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e as demais colunas que representam diferentes categorias de despesas, identificadas pelos números contábeis. A análise do gráfico sugere:
 
-- Altas Correlações (Próximas de 1): As colunas que aparecem em vermelho na parte superior têm uma forte correlação positiva com a coluna "Total Mês". Isso indica que as variações nos valores dessas despesas estão diretamente relacionadas ao aumento ou diminuição do total mensal.
+ - Altas Correlações (Próximas de 1): As colunas que aparecem em vermelho na parte superior têm uma forte correlação positiva com a coluna "Total Mês". Isso indica que as variações nos valores dessas despesas    estão diretamente relacionadas ao aumento ou diminuição do total mensal.
 
-- Baixas Correlações (Próximas de 0): As colunas que aparecem em tons de azul claro possuem uma baixa correlação com "Total Mês". Isso sugere que essas despesas têm pouca ou nenhuma influência direta no total mensal.
+ - Baixas Correlações (Próximas de 0): As colunas que aparecem em tons de azul claro possuem uma baixa correlação com "Total Mês". Isso sugere que essas despesas têm pouca ou nenhuma influência direta no total mensal.
 
-- Correlação Negativa: Não há tons de azul escuro que indiquem correlações negativas significativas (próximas de -1), o que indica que nenhuma das despesas está inversamente relacionada ao "Total Mês".
+ - Correlação Negativa: Não há tons de azul escuro que indiquem correlações negativas significativas (próximas de -1), o que indica que nenhuma das despesas está inversamente relacionada ao "Total Mês".
 
-- Distribuição das Correlações: Observa-se que a maioria das colunas tem correlação baixa ou moderada, enquanto poucas possuem correlação muito alta. Isso sugere que apenas um subconjunto de despesas contribui significativamente para o total mensal.
+ - Distribuição das Correlações: Observa-se que a maioria das colunas tem correlação baixa ou moderada, enquanto poucas possuem correlação muito alta. Isso sugere que apenas um subconjunto de despesas contribui significativamente para o total mensal.
 <br><br>
 ![image](https://github.com/user-attachments/assets/9fbd4c4e-c5d9-424e-8a84-ae7da17ac0be)
 <br><br>
 Usando um modelo de RandomForest para identificar a importância das variáveis.
 O gráfico apresenta a evolução ao longo do tempo de cinco colunas selecionadas, representando diferentes categorias de despesas contábeis. A análise do gráfico sugere os seguintes pontos:
- -	Tendências Gerais:
+  -	Tendências Gerais:
 Algumas despesas, como as representadas pelas colunas 311110107 e 362110101, mostram um crescimento acentuado nos últimos meses, indicando picos de gastos significativos.
 Outras categorias, como 332210105, apresentam flutuações mais sutis ao longo do período, mas ainda mostram variações pontuais.
 
- -	Picos e Anomalias:
+  -	Picos e Anomalias:
 Há aumentos repentinos em algumas colunas, como no caso de 362110101 e 311110107, especialmente nos meses finais. Esses picos podem ser indicativos de eventos extraordinários ou despesas atípicas que impactaram o total.
 
- - Estabilidade em Algumas Categorias:
+  - Estabilidade em Algumas Categorias:
 Despesas como as representadas por 313110114 permanecem relativamente constantes ao longo do tempo, sugerindo que essas categorias têm um comportamento mais previsível.
- -	Comparação Entre Categorias:
+  -	Comparação Entre Categorias:
 Algumas categorias possuem valores muito mais altos em comparação a outras, indicando que essas despesas têm maior peso no total geral.
 <br><br>
 ![image](https://github.com/user-attachments/assets/9fa16376-6a12-4634-8e45-e99b45cf5fdb)
