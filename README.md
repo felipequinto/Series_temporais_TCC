@@ -48,9 +48,9 @@ Por meio deste estudo, espera-se contribuir para o entendimento das melhores pr�
 
 ### 2. Modelagem
 Cada despesa possui um respectivo número contábil, que foi utilizado para criar colunas no DataFrame, onde cada coluna representa uma categoria de despesa específica. Além disso, foram adicionadas colunas para representar os anos e meses, permitindo uma organização temporal dos dados e facilitando a análise e a modelagem preditiva. Foram realizadas análises detalhadas nessas colunas para identificar relações entre as variáveis e estudar a base de dados com o objetivo de compreender melhor os padrões presentes, bem como avaliar possíveis outliers e tendências ao longo do tempo. Essas análises foram fundamentais para orientar as etapas subsequentes de preparação dos dados e construção do modelo preditivo.
-
+<br><br>
 ![image](https://github.com/user-attachments/assets/867dd620-5461-44f5-bbde-90a9714b83c9)
-
+<br><br>
 O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e as demais colunas que representam diferentes categorias de despesas, identificadas pelos números contábeis. A análise do gráfico sugere:
 
 1.	Altas Correlações (Próximas de 1): As colunas que aparecem em vermelho na parte superior têm uma forte correlação positiva com a coluna "Total Mês". Isso indica que as variações nos valores dessas despesas estão diretamente relacionadas ao aumento ou diminuição do total mensal.
