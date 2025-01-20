@@ -65,34 +65,34 @@ O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e a
 <br><br>
 Usando um modelo de RandomForest para identificar a importância das variáveis.
 O gráfico apresenta a evolução ao longo do tempo de cinco colunas selecionadas, representando diferentes categorias de despesas contábeis. A análise do gráfico sugere os seguintes pontos:
-1.	Tendências Gerais:
+ -	Tendências Gerais:
 Algumas despesas, como as representadas pelas colunas 311110107 e 362110101, mostram um crescimento acentuado nos últimos meses, indicando picos de gastos significativos.
 Outras categorias, como 332210105, apresentam flutuações mais sutis ao longo do período, mas ainda mostram variações pontuais.
 
-2.	Picos e Anomalias:
+ -	Picos e Anomalias:
 Há aumentos repentinos em algumas colunas, como no caso de 362110101 e 311110107, especialmente nos meses finais. Esses picos podem ser indicativos de eventos extraordinários ou despesas atípicas que impactaram o total.
 
-3.	Estabilidade em Algumas Categorias:
+ - Estabilidade em Algumas Categorias:
 Despesas como as representadas por 313110114 permanecem relativamente constantes ao longo do tempo, sugerindo que essas categorias têm um comportamento mais previsível.
-4.	Comparação Entre Categorias:
+ -	Comparação Entre Categorias:
 Algumas categorias possuem valores muito mais altos em comparação a outras, indicando que essas despesas têm maior peso no total geral.
 <br><br>
 ![image](https://github.com/user-attachments/assets/9fa16376-6a12-4634-8e45-e99b45cf5fdb)
 <br><br>
 O gráfico gráfico de barras horizontais apresenta a importância das variáveis (features) utilizadas no treinamento de um modelo de regressão com Random Forest para prever o "Total Mês". A análise dos resultados mostra os seguintes pontos:
 
-1.	Principais Features:
+ -	Principais Features:
 As variáveis 312110103 e 331110106 possuem os maiores valores de importância, indicando que contribuem significativamente para a previsão do "Total Mês".
 Esses dados sugerem que essas despesas têm uma forte relação com o total mensal e desempenham um papel crucial no modelo.
 
-2.	Importância Moderada:
+ -	Importância Moderada:
 Variáveis como 331110102 e 3322101AB também apresentam uma relevância considerável, embora sejam menos importantes que as principais features.
 Esse grupo de variáveis pode indicar padrões secundários que impactam a previsão do total mensal.
 
-3.	Menores Importâncias:
+ -	Menores Importâncias:
 Features como 332110132 e 332210177 possuem valores mais baixos de importância, sugerindo que têm pouca influência na variável alvo.
 Essas variáveis podem ser consideradas para redução de dimensionalidade, caso necessário.
-4.	Diversidade de Impactos:
+ -	Diversidade de Impactos:
 A diferença nas importâncias mostra que apenas algumas variáveis têm um impacto expressivo na previsão, enquanto outras contribuem de forma marginal.
 <br><br>
 ![image](https://github.com/user-attachments/assets/c4843516-b7ba-44cd-b6c4-68d305253228)
