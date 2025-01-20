@@ -51,7 +51,7 @@ Cada despesa possui um respectivo número contábil, que foi utilizado para cria
 <br><br>
 ![image](https://github.com/user-attachments/assets/867dd620-5461-44f5-bbde-90a9714b83c9)
 <br><br>
-O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e as demais colunas que representam diferentes categorias de despesas, identificadas pelos números contábeis. A análise do gráfico sugere:
+ O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e as demais colunas que representam diferentes categorias de despesas, identificadas pelos números contábeis. A análise do gráfico sugere:
 - Altas Correlações (Próximas de 1): As colunas que aparecem em vermelho na parte superior têm uma forte correlação positiva com a coluna "Total Mês". Isso indica que as variações nos valores dessas despesas    estão diretamente relacionadas ao aumento ou diminuição do total mensal.
 - Baixas Correlações (Próximas de 0): As colunas que aparecem em tons de azul claro possuem uma baixa correlação com "Total Mês". Isso sugere que essas despesas têm pouca ou nenhuma influência direta no total mensal.
 - Correlação Negativa: Não há tons de azul escuro que indiquem correlações negativas significativas (próximas de -1), o que indica que nenhuma das despesas está inversamente relacionada ao "Total Mês".
