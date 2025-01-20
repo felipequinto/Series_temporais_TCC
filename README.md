@@ -29,7 +29,10 @@ Este repositório contém o código desenvolvido, os insights obtidos e as visua
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
 
-The main objective of this project was to analyze and develop a machine learning model to predict a company's expenses. The dataset used contains 27 months of expenses, presenting an additional challenge due to its small volume and the presence of outliers. The study explored the fundamental steps of data preparation, feature selection, and model evaluation, with a focus on understanding how machine learning techniques behave in scenarios with historical data limitations and irregularities.
+The main objective of this project was to analyze and develop a machine learning model to predict a company's expenses. The dataset used contains 27 months of expenses, presenting an additional challenge due to its small volume and the presence of outliers.
+
+The study explored the fundamental steps of data preparation, feature selection, and model evaluation, with a focus on understanding how machine learning techniques behave in scenarios with historical data limitations and irregularities.
+
 The model's results were analyzed considering predictive metrics and the ability to deal with atypical patterns in the data, contributing to the understanding of the possibilities and limitations of applying predictive algorithms in similar contexts.
 This repository contains the code developed, the insights obtained, and the visualizations used to interpret the results.
 
