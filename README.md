@@ -1,10 +1,8 @@
-# Series_temporais_TCC
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-# Nome do projeto
+# Análise Séries Temporais
 
-#### Aluno: [Nome](https://github.com/link_do_github)
-#### Orientadora: [Nome Sobrenome](https://github.com/link_do_github).
-#### Co-orientador(/a/es/as): [Nome Sobrenome](https://github.com/link_do_github). <!-- caso não aplicável, remover esta linha -->
+#### Aluno: [Felipe Ribeiro Quinto](https://github.com/felipequinto)
+#### Orientador: [Felipe Borges](https://github.com/FelipeBorgesC).
 
 ---
 
@@ -13,29 +11,24 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 <!-- para os links a seguir, caso os arquivos estejam no mesmo repositório que este README, não há necessidade de incluir o link completo: basta incluir o nome do arquivo, com extensão, que o GitHub completa o link corretamente -->
 - [Link para o código](https://github.com/link_do_repositorio). <!-- caso não aplicável, remover esta linha -->
 
-- [Link para a monografia](https://link_da_monografia.com). <!-- caso não aplicável, remover esta linha -->
-
-- Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
-    - [Nome do Trabalho 1](https://link_do_trabalho.com).
-    - [Nome do Trabalho 2](https://link_do_trabalho.com).
-
 ---
 
 ### Resumo
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+Este projeto teve como objetivo principal analisar e desenvolver um modelo de machine learning para prever despesas de uma empresa. O conjunto de dados utilizado contém 27 meses de despesas, apresentando um desafio adicional devido ao seu pequeno volume e à presença de outliers. O estudo explorou as etapas fundamentais de preparação dos dados, seleção de features e avaliação de modelos, com foco em entender como técnicas de machine learning se comportam em cenários com limitações de dados históricos e irregularidades.
+Os resultados do modelo foram analisados considerando métricas preditivas e a capacidade de lidar com padrões atípicos nos dados, contribuindo para o entendimento das possibilidades e limitações da aplicação de algoritmos preditivos em contextos semelhantes.
+
+Este repositório contém o código desenvolvido, os insights obtidos e as visualizações utilizadas para interpretação dos resultados..
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
-
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
-
-Donec molestie, ante quis tempus consequat, mauris ante fringilla elit, euismod hendrerit leo erat et felis. Mauris faucibus odio est, non sagittis urna maximus ut. Suspendisse blandit ligula pellentesque tincidunt malesuada. Sed at ornare ligula, et aliquam dui. Cras a lectus id turpis accumsan pellentesque ut eget metus. Pellentesque rhoncus pellentesque est et viverra. Pellentesque non risus velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+The main objective of this project was to analyze and develop a machine learning model to predict a company's expenses. The dataset used contains 27 months of expenses, presenting an additional challenge due to its small volume and the presence of outliers. The study explored the fundamental steps of data preparation, feature selection, and model evaluation, with a focus on understanding how machine learning techniques behave in scenarios with historical data limitations and irregularities.
+The model's results were analyzed considering predictive metrics and the ability to deal with atypical patterns in the data, contributing to the understanding of the possibilities and limitations of applying predictive algorithms in similar contexts.
+This repository contains the code developed, the insights obtained, and the visualizations used to interpret the results.
 
 ### 1. Introdução
 
