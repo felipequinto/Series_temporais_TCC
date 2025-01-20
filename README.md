@@ -47,10 +47,10 @@ O principal objetivo deste trabalho foi desenvolver um modelo de machine learnin
 Por meio deste estudo, espera-se contribuir para o entendimento das melhores práticas na aplicação de modelos de machine learning em contextos com restrições de dados e padrões atípicos, oferecendo insights relevantes tanto para organizações sem fins lucrativos quanto para o campo da ciência de dados.
 
 ### 2. Modelagem
+Cada despesa possui um respectivo número contábil, que foi utilizado para criar colunas no DataFrame, onde cada coluna representa uma categoria de despesa específica. Além disso, foram adicionadas colunas para representar os anos e meses, permitindo uma organização temporal dos dados e facilitando a análise e a modelagem preditiva. Foram realizadas análises detalhadas nessas colunas para identificar relações entre as variáveis e estudar a base de dados com o objetivo de compreender melhor os padrões presentes, bem como avaliar possíveis outliers e tendências ao longo do tempo. Essas análises foram fundamentais para orientar as etapas subsequentes de preparação dos dados e construção do modelo preditivo.
+![image](https://github.com/user-attachments/assets/867dd620-5461-44f5-bbde-90a9714b83c9)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
 
 ### 3. Resultados
 
