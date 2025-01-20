@@ -60,8 +60,9 @@ O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e a
 3.	Correlação Negativa: Não há tons de azul escuro que indiquem correlações negativas significativas (próximas de -1), o que indica que nenhuma das despesas está inversamente relacionada ao "Total Mês".
 
 4.	Distribuição das Correlações: Observa-se que a maioria das colunas tem correlação baixa ou moderada, enquanto poucas possuem correlação muito alta. Isso sugere que apenas um subconjunto de despesas contribui significativamente para o total mensal.
+<br><br>
 ![image](https://github.com/user-attachments/assets/9fbd4c4e-c5d9-424e-8a84-ae7da17ac0be)
-
+<br><br>
 Usando um modelo de RandomForest para identificar a importância das variáveis.
 O gráfico apresenta a evolução ao longo do tempo de cinco colunas selecionadas, representando diferentes categorias de despesas contábeis. A análise do gráfico sugere os seguintes pontos:
 1.	Tendências Gerais:
@@ -75,9 +76,9 @@ Há aumentos repentinos em algumas colunas, como no caso de 362110101 e 31111010
 Despesas como as representadas por 313110114 permanecem relativamente constantes ao longo do tempo, sugerindo que essas categorias têm um comportamento mais previsível.
 4.	Comparação Entre Categorias:
 Algumas categorias possuem valores muito mais altos em comparação a outras, indicando que essas despesas têm maior peso no total geral.
-
+<br><br>
 ![image](https://github.com/user-attachments/assets/9fa16376-6a12-4634-8e45-e99b45cf5fdb)
-
+<br><br>
 O gráfico gráfico de barras horizontais apresenta a importância das variáveis (features) utilizadas no treinamento de um modelo de regressão com Random Forest para prever o "Total Mês". A análise dos resultados mostra os seguintes pontos:
 
 1.	Principais Features:
@@ -93,9 +94,9 @@ Features como 332110132 e 332210177 possuem valores mais baixos de importância,
 Essas variáveis podem ser consideradas para redução de dimensionalidade, caso necessário.
 4.	Diversidade de Impactos:
 A diferença nas importâncias mostra que apenas algumas variáveis têm um impacto expressivo na previsão, enquanto outras contribuem de forma marginal.
-
+<br><br>
 ![image](https://github.com/user-attachments/assets/c4843516-b7ba-44cd-b6c4-68d305253228)
-
+<br><br>
 ### 3. Resultados
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
