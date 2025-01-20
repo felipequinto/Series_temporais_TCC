@@ -81,19 +81,19 @@ Algumas categorias possuem valores muito mais altos em comparação a outras, in
 <br><br>
 O gráfico gráfico de barras horizontais apresenta a importância das variáveis (features) utilizadas no treinamento de um modelo de regressão com Random Forest para prever o "Total Mês". A análise dos resultados mostra os seguintes pontos:
 
- -	Principais Features:
-As variáveis 312110103 e 331110106 possuem os maiores valores de importância, indicando que contribuem significativamente para a previsão do "Total Mês".
-Esses dados sugerem que essas despesas têm uma forte relação com o total mensal e desempenham um papel crucial no modelo.
-
- -	Importância Moderada:
-Variáveis como 331110102 e 3322101AB também apresentam uma relevância considerável, embora sejam menos importantes que as principais features.
-Esse grupo de variáveis pode indicar padrões secundários que impactam a previsão do total mensal.
-
- -	Menores Importâncias:
-Features como 332110132 e 332210177 possuem valores mais baixos de importância, sugerindo que têm pouca influência na variável alvo.
-Essas variáveis podem ser consideradas para redução de dimensionalidade, caso necessário.
- -	Diversidade de Impactos:
-A diferença nas importâncias mostra que apenas algumas variáveis têm um impacto expressivo na previsão, enquanto outras contribuem de forma marginal.
+  -	Principais Features:
+ As variáveis 312110103 e 331110106 possuem os maiores valores de importância, indicando que contribuem significativamente para a previsão do "Total Mês".
+ Esses dados sugerem que essas despesas têm uma forte relação com o total mensal e desempenham um papel crucial no modelo.
+ 
+  -	Importância Moderada:
+ Variáveis como 331110102 e 3322101AB também apresentam uma relevância considerável, embora sejam menos importantes que as principais features.
+ Esse grupo de variáveis pode indicar padrões secundários que impactam a previsão do total mensal.
+ 
+  -	Menores Importâncias:
+ Features como 332110132 e 332210177 possuem valores mais baixos de importância, sugerindo que têm pouca influência na variável alvo.
+ Essas variáveis podem ser consideradas para redução de dimensionalidade, caso necessário.
+  -	Diversidade de Impactos:
+ A diferença nas importâncias mostra que apenas algumas variáveis têm um impacto expressivo na previsão, enquanto outras contribuem de forma marginal.
 <br><br>
 ![image](https://github.com/user-attachments/assets/c4843516-b7ba-44cd-b6c4-68d305253228)
 <br><br>
