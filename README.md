@@ -132,36 +132,36 @@ Camadas densas (Dense layers) para redução de dimensionalidade.
 Step 1: Previsão do Total Mensal
 Random Forest:
 
-RMSE: Demonstrou boa capacidade de generalização
-R²: Mostrou forte correlação entre valores previstos e reais
-MAPE: Indicou erro percentual aceitável para aplicação prática
+RMSE: Demonstrou boa capacidade de generalização.
+R²: Mostrou forte correlação entre valores previstos e reais.
+MAPE: Indicou erro percentual aceitável para aplicação prática.
 
 Rede Neural:
 
-Convergência estável conforme evidenciado pela curva de loss
-Boa performance na previsão de tendências
-Capacidade de capturar padrões sazonais
+Convergência estável conforme evidenciado pela curva de loss.
+Boa performance na previsão de tendências.
+Capacidade de capturar padrões sazonais.
 
 Step 2: Previsão Multicategoria
 O modelo demonstrou capacidade de:
 
-Aprender relações entre diferentes categorias de despesas
-Capturar tendências específicas por categoria
-Manter consistência nas previsões agregadas
+Aprender relações entre diferentes categorias de despesas.
+Capturar tendências específicas por categoria.
+Manter consistência nas previsões agregadas.
 
 Visualizações
 O projeto inclui visualizações importantes:
 
-Gráficos de dispersão (valores reais vs. previstos)
-Curvas de aprendizado (loss vs. epochs)
-Séries temporais comparando valores reais e previstos
+Gráficos de dispersão (valores reais vs. previstos).
+Curvas de aprendizado (loss vs. epochs).
+Séries temporais comparando valores reais e previstos.
 
 Reprodutibilidade
 O código inclui:
 
-Fixação de seeds para reprodutibilidade
-Padronização de pré-processamento
-Documentação das configurações de treinamento
+Fixação de seeds para reprodutibilidade.
+Padronização de pré-processamento.
+Documentação das configurações de treinamento.
 
 Tecnologias Utilizadas
 
