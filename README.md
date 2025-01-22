@@ -127,22 +127,56 @@ LSTM bidirecional seguido de camada convolucional 1D (CNN).
 
 Camadas densas (Dense layers) para redução de dimensionalidade.
 
-
-
-
-
 ### 3. Resultados
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+Step 1: Previsão do Total Mensal
+Random Forest:
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+RMSE: Demonstrou boa capacidade de generalização
+R²: Mostrou forte correlação entre valores previstos e reais
+MAPE: Indicou erro percentual aceitável para aplicação prática
 
+Rede Neural:
+
+Convergência estável conforme evidenciado pela curva de loss
+Boa performance na previsão de tendências
+Capacidade de capturar padrões sazonais
+
+Step 2: Previsão Multicategoria
+O modelo demonstrou capacidade de:
+
+Aprender relações entre diferentes categorias de despesas
+Capturar tendências específicas por categoria
+Manter consistência nas previsões agregadas
+
+Visualizações
+O projeto inclui visualizações importantes:
+
+Gráficos de dispersão (valores reais vs. previstos)
+Curvas de aprendizado (loss vs. epochs)
+Séries temporais comparando valores reais e previstos
+
+Reprodutibilidade
+O código inclui:
+
+Fixação de seeds para reprodutibilidade
+Padronização de pré-processamento
+Documentação das configurações de treinamento
+
+Tecnologias Utilizadas
+
+Python 3.x
+TensorFlow/Keras
+Scikit-learn
+Pandas
+NumPy
+Matplotlib
+Seaborn
 ### 4. Conclusões
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+O projeto demonstra a viabilidade de prever despesas tanto de forma agregada quanto por categoria, com resultados promissores em ambas as abordagens. A combinação de modelos tradicionais (Random Forest) e deep learning (LSTM+CNN) oferece insights complementares sobre o comportamento das despesas ao longo do tempo.
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
-
+A abordagem em dois steps permite uma análise mais completa, onde o Step 1 fornece uma visão macro das despesas totais, enquanto o Step 2 possibilita um entendimento mais granular por categoria.
 ---
 
 Matrícula: 222.100.15
