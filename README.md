@@ -17,24 +17,48 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-Este projeto teve como objetivo principal analisar e desenvolver um modelo de machine learning para prever despesas de uma empresa. O conjunto de dados utilizado contém 27 meses de despesas, apresentando um desafio adicional devido ao seu pequeno volume e à presença de outliers.
+Introdução
 
-O estudo explorou as etapas fundamentais de preparação dos dados, seleção de features e avaliação de modelos, com foco em entender como técnicas de machine learning se comportam em cenários com limitações de dados históricos e irregularidades.
+Este projeto tem como base os dados de despesas de uma empresa sem fins lucrativos, abrangendo os anos de 2018, 2019 e o período de janeiro a março de 2020. A base de dados original contém informações organizadas nas colunas: lote, sequência, tipo, estabelecimento, conta contábil, fornecedor, documento, item, data de lançamento, mês, valor de lançamento contábil e valor do documento.
 
-Os resultados do modelo foram analisados considerando métricas preditivas e a capacidade de lidar com padrões atípicos nos dados, contribuindo para o entendimento das possibilidades e limitações da aplicação de algoritmos preditivos em contextos semelhantes.
+O principal objetivo deste trabalho foi desenvolver um modelo de machine learning capaz de prever as despesas futuras da empresa, utilizando como referência os dados históricos disponíveis. Além disso, buscou-se avaliar o desempenho desses modelos em um cenário caracterizado pela escassez de dados — limitado a 27 meses — e pela presença de valores outliers. Esses desafios foram cruciais para compreender as limitações e potencialidades dos algoritmos preditivos em situações similares.
 
-Este repositório contém o código desenvolvido, os insights obtidos e as visualizações utilizadas para interpretação dos resultados..
+Por meio deste estudo, espera-se contribuir para o entendimento das melhores práticas na aplicação de modelos de machine learning em contextos com restrições de dados e padrões atípicos, oferecendo insights relevantes tanto para organizações sem fins lucrativos quanto para o campo da ciência de dados.
+
+Modelo de Previsão de Despesas
+
+Este projeto implementa modelos de machine learning para previsão de despesas utilizando séries temporais. São exploradas duas abordagens diferentes: uma focada apenas no total mensal (Step 1) e outra considerando múltiplas categorias de despesas (Step 2).
+
+Estrutura do Projeto
+
+O projeto está organizado em dois principais scripts de análise:
+
+- **AnalysisStep1.py**: Implementa modelos para previsão do total mensal de despesas.
+- **AnalysisStep2.py**: Expande a análise para incluir previsões de categorias específicas de despesas.
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
 
-The main objective of this project was to analyze and develop a machine learning model to predict a company's expenses. The dataset used contains 27 months of expenses, presenting an additional challenge due to its small volume and the presence of outliers.
+Introduction
 
-The study explored the fundamental steps of data preparation, feature selection, and model evaluation, with a focus on understanding how machine learning techniques behave in scenarios with historical data limitations and irregularities.
+This project is based on the expense data of a non-profit company, covering the years 2018, 2019 and the period from January to March 2020. The original database contains information organized in the following columns: batch, sequence, type, establishment, accounting account, supplier, document, item, release date, month, accounting entry value and document value.
 
-The model's results were analyzed considering predictive metrics and the ability to deal with atypical patterns in the data, contributing to the understanding of the possibilities and limitations of applying predictive algorithms in similar contexts.
-This repository contains the code developed, the insights obtained, and the visualizations used to interpret the results.
+The main objective of this work was to develop a machine learning model capable of predicting the company's future expenses, using the available historical data as a reference. In addition, we sought to evaluate the performance of these models in a scenario characterized by data scarcity — limited to 27 months — and the presence of outliers. These challenges were crucial to understanding the limitations and potential of predictive algorithms in similar situations.
+
+Through this study, we hope to contribute to the understanding of best practices in the application of machine learning models in contexts with data restrictions and atypical patterns, offering relevant insights for both nonprofit organizations and the field of data science.
+
+Expense Forecasting Model
+
+This project implements machine learning models for expense forecasting using time series. Two different approaches are explored: one focused only on the monthly total (Step 1) and another considering multiple expense categories (Step 2).
+
+Project Structure
+
+The project is organized into two main analysis scripts:
+
+- **AnalysisStep1.py**: Implements models for forecasting the monthly total of expenses.
+
+- **AnalysisStep2.py**: Expands the analysis to include forecasts of specific expense categories.
 
 ### 1. Introdução
 
@@ -47,39 +71,65 @@ O principal objetivo deste trabalho foi desenvolver um modelo de machine learnin
 Por meio deste estudo, espera-se contribuir para o entendimento das melhores práticas na aplicação de modelos de machine learning em contextos com restrições de dados e padrões atípicos, oferecendo insights relevantes tanto para organizações sem fins lucrativos quanto para o campo da ciência de dados.
 
 ### 2. Modelagem
-Para o projeto de previsão de despesas, foram utilizados dois modelos principais: Random Forest Regressor e uma Rede Neural Recorrente com LSTM (Long Short-Term Memory). Os passos adotados foram:
+Para o projeto de previsão de despesas, foram utilizados dois modelos principais: Random Forest Regressor e uma Rede Neural Recorrente com LSTM (Long Short-Term Memory). Os passos adotados foram os seguintes:
 
-1. Tratamento e Organização dos Dados
-Fonte dos Dados: Um arquivo Excel com colunas relevantes como Ano, Mês, Total Mês, e outras categorias.
-Normalização: Os dados foram escalados utilizando MinMaxScaler para normalizar os valores numéricos em um intervalo [0, 1], melhorando o desempenho dos algoritmos.
-Criação de Janelas Temporais: Foi aplicada uma técnica de janela deslizante com tamanho 5 para criar entradas sequenciais para os modelos.
-Divisão do Conjunto de Dados: Os dados foram divididos em 70% para treino e 30% para teste, com um random_state fixo para reprodutibilidade.
-2. Modelos Utilizados
-2.1 Random Forest Regressor
-Utilizado como primeiro modelo para avaliar a capacidade preditiva com hiperparâmetros ajustados usando RandomizedSearchCV.
-Hiperparâmetros testados:
-Número de estimadores (n_estimators): 100, 500, 1000.
-Profundidade máxima (max_depth): 10, 50, ou sem limite.
-Número mínimo de amostras para divisão e folhas (min_samples_split, min_samples_leaf).
-Máximo de variáveis por nó (max_features): sqrt, log2, ou todas.
-Métrica de Avaliação: mean_squared_error (erro quadrático médio) foi utilizada durante a validação cruzada (5 folds).
-O melhor modelo foi ajustado e avaliado no conjunto de teste.
-2.2 Rede Neural com LSTM
-Arquitetura composta por:
-Uma camada LSTM com 2 unidades.
-Uma camada de convolução (Conv1D) para captar padrões locais nas sequências.
-Uma camada Flatten para achatar os dados após a convolução.
-Camadas densas para realizar a predição final.
-Hiperparâmetros do Modelo:
-Otimizador: adam.
-Função de perda: mean_squared_error.
-Épocas: 200.
-Tamanho do lote (batch_size): 2.
-Regularização e Callbacks:
-Dropout para evitar overfitting.
-EarlyStopping com paciência de 15 épocas para interromper o treinamento caso não haja melhoria.
-ReduceLROnPlateau para reduzir a taxa de aprendizado dinamicamente.
-Visualização do Modelo: Foi utilizado o método summary() para detalhar a arquitetura e as dimensões de entrada e saída.
+Pré-processamento dos Dados
+
+Utilização de janela deslizante (window size = 5) para criar sequências de entrada.
+
+Normalização dos dados utilizando MinMaxScaler.
+
+Divisão dos dados em treino e teste na proporção 70/30.
+
+Modelos Implementados
+
+Step 1: Previsão do Total Mensal
+
+Random Forest Regressor
+
+Otimização de hiperparâmetros realizada com RandomizedSearchCV.
+
+Principais hiperparâmetros testados:
+
+Número de árvores: [100, 500, 1000].
+
+Profundidade máxima: [10, 50, None].
+
+Amostras mínimas para divisão: [2, 10].
+
+Features por nó: ['sqrt', 'log2', None].
+
+Rede Neural (LSTM + CNN)
+
+Arquitetura:
+
+LSTM (2 unidades) com retorno de sequências.
+
+Normalização em lote (BatchNormalization).
+
+Camada convolucional 1D (1 filtro, kernel size = 4).
+
+Camada densa para a saída.
+
+Treinamento com callbacks:
+
+EarlyStopping (paciência = 15).
+
+ReduceLROnPlateau (fator = 0.1, paciência = 5).
+
+Step 2: Previsão Multicategoria
+
+Modelo neural com arquitetura similar ao Step 1, adaptado para entrada multidimensional:
+
+Entrada: 5 timesteps com 4 features em cada timestep.
+
+LSTM bidirecional seguido de camada convolucional 1D (CNN).
+
+Camadas densas (Dense layers) para redução de dimensionalidade.
+
+
+
+
 
 ### 3. Resultados
 
