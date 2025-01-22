@@ -33,8 +33,8 @@ Estrutura do Projeto
 
 O projeto está organizado em dois principais scripts de análise:
 
-- **AnalysisStep1.py**: Implementa modelos para previsão do total mensal de despesas.
-- **AnalysisStep2.py**: Expande a análise para incluir previsões de categorias específicas de despesas.
+- **AnalysisStep1.ipynb**: Implementa modelos para previsão do total mensal de despesas.
+- **AnalysisStep2.ipynb**: Expande a análise para incluir previsões de categorias específicas de despesas.
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
@@ -56,9 +56,9 @@ Project Structure
 
 The project is organized into two main analysis scripts:
 
-- **AnalysisStep1.py**: Implements models for forecasting the monthly total of expenses.
+- **AnalysisStep1.ipynb**: Implements models for forecasting the monthly total of expenses.
 
-- **AnalysisStep2.py**: Expands the analysis to include forecasts of specific expense categories.
+- **AnalysisStep2.ipynb**: Expands the analysis to include forecasts of specific expense categories.
 
 ### 1. Introdução
 
@@ -81,7 +81,7 @@ Normalização dos dados utilizando MinMaxScaler.
 
 Divisão dos dados em treino e teste na proporção 70/30.
 
-Modelos Implementados
+Modelos Implementados.
 
 Step 1: Previsão do Total Mensal
 
@@ -99,7 +99,7 @@ Amostras mínimas para divisão: [2, 10].
 
 Features por nó: ['sqrt', 'log2', None].
 
-Rede Neural (LSTM + CNN)
+Rede Neural (LSTM + CNN).
 
 Arquitetura:
 
