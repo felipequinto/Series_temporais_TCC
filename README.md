@@ -178,6 +178,22 @@ O projeto demonstra a viabilidade de prever despesas tanto de forma agregada qua
 
 A abordagem em dois steps permite uma análise mais completa, onde o Step 1 fornece uma visão macro das despesas totais, enquanto o Step 2 possibilita um entendimento mais granular por categoria.
 
+Resultados Step 1:
+
+Random Forest
+
+![image](https://github.com/user-attachments/assets/006e6d20-fa67-4a60-b112-6c5b58322e46)
+
+Rede Neural
+
+![image](https://github.com/user-attachments/assets/4343cf53-0152-4386-b370-95cec2a27cf2)
+
+Resultado melhor modelo Step 2:
+
+Rede Neural
+
+![image](https://github.com/user-attachments/assets/aaedfb99-95f9-4d69-8c28-84fd5dd0c618)
+
 ---
 
 Matrícula: 222.100.15
