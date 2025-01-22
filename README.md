@@ -1,5 +1,5 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-# Análise Séries Temporais
+# Análise Séries Temporais - Previsão de Despesas
 
 #### Aluno: [Felipe Ribeiro Quinto](https://github.com/felipequinto)
 #### Orientador: [Felipe Borges](https://github.com/FelipeBorgesC).
