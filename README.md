@@ -47,52 +47,40 @@ O principal objetivo deste trabalho foi desenvolver um modelo de machine learnin
 Por meio deste estudo, espera-se contribuir para o entendimento das melhores práticas na aplicação de modelos de machine learning em contextos com restrições de dados e padrões atípicos, oferecendo insights relevantes tanto para organizações sem fins lucrativos quanto para o campo da ciência de dados.
 
 ### 2. Modelagem
-Cada despesa possui um respectivo número contábil, que foi utilizado para criar colunas no DataFrame, onde cada coluna representa uma categoria de despesa específica. Além disso, foram adicionadas colunas para representar os anos e meses, permitindo uma organização temporal dos dados e facilitando a análise e a modelagem preditiva. Foram realizadas análises detalhadas nessas colunas para identificar relações entre as variáveis e estudar a base de dados com o objetivo de compreender melhor os padrões presentes, bem como avaliar possíveis outliers e tendências ao longo do tempo. Essas análises foram fundamentais para orientar as etapas subsequentes de preparação dos dados e construção do modelo preditivo.
-<br><br>
-![image](https://github.com/user-attachments/assets/867dd620-5461-44f5-bbde-90a9714b83c9)
-<br><br>
-O mapa de calor apresentado exibe a correlação entre a coluna "Total Mês" e as demais colunas que representam diferentes categorias de despesas, identificadas pelos números contábeis. A análise do gráfico sugere:
-- Altas Correlações (Próximas de 1): As colunas que aparecem em vermelho na parte superior têm uma forte correlação positiva com a coluna "Total Mês". Isso indica que as variações nos valores dessas despesas    estão diretamente relacionadas ao aumento ou diminuição do total mensal.
-- Baixas Correlações (Próximas de 0): As colunas que aparecem em tons de azul claro possuem uma baixa correlação com "Total Mês". Isso sugere que essas despesas têm pouca ou nenhuma influência direta no total mensal.
-- Correlação Negativa: Não há tons de azul escuro que indiquem correlações negativas significativas (próximas de -1), o que indica que nenhuma das despesas está inversamente relacionada ao "Total Mês".
-- Distribuição das Correlações: Observa-se que a maioria das colunas tem correlação baixa ou moderada, enquanto poucas possuem correlação muito alta. Isso sugere que apenas um subconjunto de despesas contribui significativamente para o total mensal.
-<br><br>
-![image](https://github.com/user-attachments/assets/9fbd4c4e-c5d9-424e-8a84-ae7da17ac0be)
-<br><br>
-Usando um modelo de RandomForest para identificar a importância das variáveis.
-O gráfico apresenta a evolução ao longo do tempo de cinco colunas selecionadas, representando diferentes categorias de despesas contábeis. A análise do gráfico sugere os seguintes pontos:
-- Tendências Gerais:
-Algumas despesas, como as representadas pelas colunas 311110107 e 362110101, mostram um crescimento acentuado nos últimos meses, indicando picos de gastos significativos.
-Outras categorias, como 332210105, apresentam flutuações mais sutis ao longo do período, mas ainda mostram variações pontuais.
+Para o projeto de previsão de despesas, foram utilizados dois modelos principais: Random Forest Regressor e uma Rede Neural Recorrente com LSTM (Long Short-Term Memory). Os passos adotados foram:
 
-- Picos e Anomalias:
-Há aumentos repentinos em algumas colunas, como no caso de 362110101 e 311110107, especialmente nos meses finais. Esses picos podem ser indicativos de eventos extraordinários ou despesas atípicas que impactaram o total.
+1. Tratamento e Organização dos Dados
+Fonte dos Dados: Um arquivo Excel com colunas relevantes como Ano, Mês, Total Mês, e outras categorias.
+Normalização: Os dados foram escalados utilizando MinMaxScaler para normalizar os valores numéricos em um intervalo [0, 1], melhorando o desempenho dos algoritmos.
+Criação de Janelas Temporais: Foi aplicada uma técnica de janela deslizante com tamanho 5 para criar entradas sequenciais para os modelos.
+Divisão do Conjunto de Dados: Os dados foram divididos em 70% para treino e 30% para teste, com um random_state fixo para reprodutibilidade.
+2. Modelos Utilizados
+2.1 Random Forest Regressor
+Utilizado como primeiro modelo para avaliar a capacidade preditiva com hiperparâmetros ajustados usando RandomizedSearchCV.
+Hiperparâmetros testados:
+Número de estimadores (n_estimators): 100, 500, 1000.
+Profundidade máxima (max_depth): 10, 50, ou sem limite.
+Número mínimo de amostras para divisão e folhas (min_samples_split, min_samples_leaf).
+Máximo de variáveis por nó (max_features): sqrt, log2, ou todas.
+Métrica de Avaliação: mean_squared_error (erro quadrático médio) foi utilizada durante a validação cruzada (5 folds).
+O melhor modelo foi ajustado e avaliado no conjunto de teste.
+2.2 Rede Neural com LSTM
+Arquitetura composta por:
+Uma camada LSTM com 2 unidades.
+Uma camada de convolução (Conv1D) para captar padrões locais nas sequências.
+Uma camada Flatten para achatar os dados após a convolução.
+Camadas densas para realizar a predição final.
+Hiperparâmetros do Modelo:
+Otimizador: adam.
+Função de perda: mean_squared_error.
+Épocas: 200.
+Tamanho do lote (batch_size): 2.
+Regularização e Callbacks:
+Dropout para evitar overfitting.
+EarlyStopping com paciência de 15 épocas para interromper o treinamento caso não haja melhoria.
+ReduceLROnPlateau para reduzir a taxa de aprendizado dinamicamente.
+Visualização do Modelo: Foi utilizado o método summary() para detalhar a arquitetura e as dimensões de entrada e saída.
 
-- Estabilidade em Algumas Categorias:
-Despesas como as representadas por 313110114 permanecem relativamente constantes ao longo do tempo, sugerindo que essas categorias têm um comportamento mais previsível.
-- Comparação Entre Categorias:
-Algumas categorias possuem valores muito mais altos em comparação a outras, indicando que essas despesas têm maior peso no total geral.
-<br><br>
-![image](https://github.com/user-attachments/assets/9fa16376-6a12-4634-8e45-e99b45cf5fdb)
-<br><br>
-O gráfico gráfico de barras horizontais apresenta a importância das variáveis (features) utilizadas no treinamento de um modelo de regressão com Random Forest para prever o "Total Mês". A análise dos resultados mostra os seguintes pontos:
-
-- Principais Features:
- As variáveis 312110103 e 331110106 possuem os maiores valores de importância, indicando que contribuem significativamente para a previsão do "Total Mês".
- Esses dados sugerem que essas despesas têm uma forte relação com o total mensal e desempenham um papel crucial no modelo.
- 
-- Importância Moderada:
- Variáveis como 331110102 e 3322101AB também apresentam uma relevância considerável, embora sejam menos importantes que as principais features.
- Esse grupo de variáveis pode indicar padrões secundários que impactam a previsão do total mensal.
- 
-- Menores Importâncias:
- Features como 332110132 e 332210177 possuem valores mais baixos de importância, sugerindo que têm pouca influência na variável alvo.
- Essas variáveis podem ser consideradas para redução de dimensionalidade, caso necessário.
-- Diversidade de Impactos:
- A diferença nas importâncias mostra que apenas algumas variáveis têm um impacto expressivo na previsão, enquanto outras contribuem de forma marginal.
-<br><br>
-![image](https://github.com/user-attachments/assets/c4843516-b7ba-44cd-b6c4-68d305253228)
-<br><br>
 ### 3. Resultados
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
