@@ -2,7 +2,7 @@
 # Análise Séries Temporais - Previsão de Despesas
 
 #### Aluno: [Felipe Ribeiro Quinto](https://github.com/felipequinto)
-#### Orientador: [Felipe Borges](https://github.com/FelipeBorgesC).
+#### Orientador: [Felipe Borges](https://github.com/FelipeBorgesC)
 
 ---
 
