@@ -44,62 +44,26 @@ Tecnologias Utilizadas
 
 ### 3. Resultados
 
-Step 1: Previsão do Total Mensal
-Random Forest:
-
-RMSE: Demonstrou boa capacidade de generalização.
-R²: Mostrou forte correlação entre valores previstos e reais.
-MAPE: Indicou erro percentual aceitável para aplicação prática.
-
-Rede Neural:
-
-Convergência estável conforme evidenciado pela curva de loss.
-Boa performance na previsão de tendências.
-Capacidade de capturar padrões sazonais.
-
-Step 2: Previsão Multicategoria
-O modelo demonstrou capacidade de:
-
-Aprender relações entre diferentes categorias de despesas.
-Capturar tendências específicas por categoria.
-Manter consistência nas previsões agregadas.
-
-Visualizações
-O projeto inclui visualizações importantes:
-
-Gráficos de dispersão (valores reais vs. previstos).
-Curvas de aprendizado (loss vs. epochs).
-Séries temporais comparando valores reais e previstos.
-
-Reprodutibilidade
-O código inclui:
-
-Fixação de seeds para reprodutibilidade.
-Padronização de pré-processamento.
-Documentação das configurações de treinamento.
-
-
-### 4. Conclusões
-
-O projeto demonstra a viabilidade de prever despesas tanto de forma agregada quanto por categoria, com resultados promissores em ambas as abordagens. A combinação de modelos tradicionais (Random Forest) e deep learning (LSTM+CNN) oferece insights complementares sobre o comportamento das despesas ao longo do tempo.
-
-A abordagem em dois steps permite uma análise mais completa, onde o Step 1 fornece uma visão macro das despesas totais, enquanto o Step 2 possibilita um entendimento mais granular por categoria.
+Step 1 (Previsão do Total Mensal) avaliou Random Forest (RMSE, R², MAPE) com boa capacidade de generalização e Rede Neural, que demonstrou convergência estável e boa previsão de tendências sazonais. Step 2 (Previsão Multicategoria) evidenciou aprendizagem de relações entre diversas categorias, captura de tendências específicas e previsões agregadas consistentes. As visualizações incluem gráficos de dispersão (valores reais vs. previstos), curvas de aprendizado (loss vs. epochs) e comparações de séries temporais. Já a reprodutibilidade foi garantida por meio de seeds fixas, padronização de pré-processamento e documentação das configurações de treinamento.
 
 Resultados Step 1:
 
 Random Forest
 
-![image](https://github.com/user-attachments/assets/006e6d20-fa67-4a60-b112-6c5b58322e46)
+![image](https://github.com/user-attachments/assets/8a618fc6-a350-4af0-923e-c519094d72be)
+
 
 Rede Neural
-
-![image](https://github.com/user-attachments/assets/4343cf53-0152-4386-b370-95cec2a27cf2)
 
 Resultado melhor modelo Step 2:
 
 Rede Neural
 
-![image](https://github.com/user-attachments/assets/aaedfb99-95f9-4d69-8c28-84fd5dd0c618)
+
+### 4. Conclusões
+
+O projeto demonstra a viabilidade de prever despesas tanto de forma agregada quanto por categoria, com resultados promissores em ambas as abordagens. A combinação de modelos tradicionais (Random Forest) e deep learning (LSTM+CNN) oferece insights complementares sobre o comportamento das despesas ao longo do tempo.
+A abordagem em dois steps permite uma análise mais completa, onde o Step 1 fornece uma visão macro das despesas totais, enquanto o Step 2 possibilita um entendimento mais granular por categoria.
 
 ---
 
