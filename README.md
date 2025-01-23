@@ -50,15 +50,17 @@ Resultados Step 1:
 
 Random Forest
 
-![image](https://github.com/user-attachments/assets/8a618fc6-a350-4af0-923e-c519094d72be)
-
+![image](https://github.com/user-attachments/assets/66a60a2f-9f94-4641-8066-79d2cbca2e87)
 
 Rede Neural
+
+![image](https://github.com/user-attachments/assets/c525b0f7-eef9-4eae-ad43-5a26c43c57cf)
 
 Resultado melhor modelo Step 2:
 
 Rede Neural
 
+![image](https://github.com/user-attachments/assets/eac69ce0-d361-41f0-babd-e29173c25153)
 
 ### 4. Conclusões
 
