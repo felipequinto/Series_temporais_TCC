@@ -17,75 +17,30 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 ---
 
 ### Resumo
-Este projeto emprega dados de despesas de uma empresa sem fins lucrativos, referentes a 2018, 2019 e ao período de janeiro a março de 2020, para prever gastos futuros. O foco recai em desenvolver e avaliar modelos de machine learning em um cenário marcado pela escassez de dados (apenas 27 meses) e pela presença de valores atípicos, visando aprimorar o planejamento financeiro. A proposta contempla duas abordagens de previsão em série temporal: uma para o total de despesas mensais e outra segmentada em categorias específicas de gastos. Assim, busca-se 
+Este projeto emprega dados de despesas de uma empresa sem fins lucrativos, referentes a 2018, 2019 e ao período de janeiro a março de 2020, para prever gastos futuros. O foco recai em desenvolver e avaliar modelos de machine learning em um cenário marcado pela escassez de dados (apenas 27 meses) e pela presença de valores atípicos, visando aprimorar o planejamento financeiro. A proposta contempla duas abordagens de previsão em série temporal: uma para o total de despesas mensais e outra segmentada em categorias específicas de gastos. Assim, busca-se Assim, busca-se oferecer uma ferramenta mais robusta para a tomada de decisão em contextos de recursos limitados.
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
-This project uses expense data from a non-profit company for 2018, 2019, and the period from January to March 2020 to forecast future expenses. The focus is on developing and evaluating machine learning models in a scenario marked by scarcity of data (only 27 months) and the presence of outliers, aiming to improve financial planning. The proposal includes two time series forecasting approaches: one for total monthly expenses and another segmented into specific expense categories. Thus, the aim is to
+This project uses expense data from a non-profit organization for 2018, 2019, and the period from January to March 2020 to forecast future expenses. The focus is on developing and evaluating machine learning models in a scenario marked by scarce data (only 27 months) and the presence of outliers, aiming to improve financial planning. The proposal includes two time-series forecasting approaches: one for total monthly expenses and another segmented into specific expense categories. Thus, the aim is to offer a more robust tool for decision-making in contexts of limited resources.
 
 
 ### 1. Introdução
 A base original inclui informações como lote, sequência, tipo, estabelecimento, conta contábil, fornecedor, documento, item, data de lançamento, mês e valores contábeis. Dada a necessidade de antever despesas para otimizar o fluxo financeiro, a empresa enfrentou o desafio de trabalhar com registros reduzidos e dados outliers, que impactam a confiabilidade de modelos preditivos. Para contornar essas limitações, foram testados algoritmos distintos de machine learning, tanto para analisar o montante total de despesas quanto para prever categorias de gastos específicas. O objetivo final é evidenciar as boas práticas aplicadas na modelagem de séries temporais em ambientes com restrição de dados e cenários atípicos, contribuindo para a eficiência de organizações sem fins lucrativos e para a evolução das técnicas de ciência de dados.
 
-
 ### 2. Modelagem
-Para o projeto de previsão de despesas, foram utilizados dois modelos principais: Random Forest Regressor e uma Rede Neural Recorrente com LSTM (Long Short-Term Memory). Os passos adotados foram os seguintes:
+Foram desenvolvidas três abordagens, todas utilizando scikit-learn e TensorFlow/Keras, com janela deslizante (window size = 5), normalização (MinMaxScaler) e divisão de dados em 70/30. A Abordagem RF (clássica) emprega o RandomForestRegressor para prever o total mensal, otimizando hiperparâmetros via RandomizedSearchCV. Já a Abordagem RN (rede recorrente com input único) utiliza uma rede LSTM + CNN 1D para série temporal univariada (apenas o valor das despesas). Por fim, a Abordagem RN 2 (rede recorrente com múltiplas entradas) adota uma arquitetura semelhante, porém com várias variáveis por timestep, permitindo estimar múltiplas categorias de despesas simultaneamente.
 
-Pré-processamento dos Dados
+Tecnologias Utilizadas
 
-Utilização de janela deslizante (window size = 5) para criar sequências de entrada.
-
-Normalização dos dados utilizando MinMaxScaler.
-
-Divisão dos dados em treino e teste na proporção 70/30.
-
-Modelos Implementados.
-
-Step 1: Previsão do Total Mensal
-
-Random Forest Regressor
-
-Otimização de hiperparâmetros realizada com RandomizedSearchCV.
-
-Principais hiperparâmetros testados:
-
-Número de árvores: [100, 500, 1000].
-
-Profundidade máxima: [10, 50, None].
-
-Amostras mínimas para divisão: [2, 10].
-
-Features por nó: ['sqrt', 'log2', None].
-
-Rede Neural (LSTM + CNN).
-
-Arquitetura:
-
-LSTM (2 unidades) com retorno de sequências.
-
-Normalização em lote (BatchNormalization).
-
-Camada convolucional 1D (1 filtro, kernel size = 4).
-
-Camada densa para a saída.
-
-Treinamento com callbacks:
-
-EarlyStopping (paciência = 15).
-
-ReduceLROnPlateau (fator = 0.1, paciência = 5).
-
-Step 2: Previsão Multicategoria
-
-Modelo neural com arquitetura similar ao Step 1, adaptado para entrada multidimensional:
-
-Entrada: 5 timesteps com 4 features em cada timestep.
-
-LSTM bidirecional seguido de camada convolucional 1D (CNN).
-
-Camadas densas (Dense layers) para redução de dimensionalidade.
+- Python 3.x
+- TensorFlow/Keras
+- Scikit-learn
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
 
 ### 3. Resultados
 
@@ -123,15 +78,7 @@ Fixação de seeds para reprodutibilidade.
 Padronização de pré-processamento.
 Documentação das configurações de treinamento.
 
-Tecnologias Utilizadas
 
-Python 3.x
-TensorFlow/Keras
-Scikit-learn
-Pandas
-NumPy
-Matplotlib
-Seaborn
 ### 4. Conclusões
 
 O projeto demonstra a viabilidade de prever despesas tanto de forma agregada quanto por categoria, com resultados promissores em ambas as abordagens. A combinação de modelos tradicionais (Random Forest) e deep learning (LSTM+CNN) oferece insights complementares sobre o comportamento das despesas ao longo do tempo.
