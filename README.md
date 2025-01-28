@@ -44,7 +44,10 @@ Tecnologias Utilizadas
 
 ### 3. Resultados
 
-Step 1 (Previsão do Total Mensal) avaliou Random Forest (RMSE, R², MAPE) com boa capacidade de generalização e Rede Neural, que demonstrou convergência estável e boa previsão de tendências sazonais. Step 2 (Previsão Multicategoria) evidenciou aprendizagem de relações entre diversas categorias, captura de tendências específicas e previsões agregadas consistentes. As visualizações incluem gráficos de dispersão (valores reais vs. previstos), curvas de aprendizado (loss vs. epochs) e comparações de séries temporais. Já a reprodutibilidade foi garantida por meio de seeds fixas, padronização de pré-processamento e documentação das configurações de treinamento.
+Step 1 (Previsão do Total Mensal) avaliou Random Forest (RMSE, R², MAPE) com boa capacidade de generalização e Rede Neural, que demonstrou convergência estável e boa previsão de tendências sazonais.
+No caso, step 1 seria uma avaliação univariável, no qual o modelo só possui uma única entrada (variável) e prevê essa mesma variável 1 instante de tempo à frente.
+Step 2 (Previsão Multicategoria) evidenciou aprendizagem de relações entre diversas categorias, captura de tendências específicas e previsões agregadas consistentes. Já o caso do step 2, seria uma avaliação multivariável, em que o modelo recebe múltiplas entradas de diversas variáveis e prevê uma dessas variáveis de entrada no instante seguinte.
+As visualizações incluem gráficos de dispersão (valores reais vs. previstos), curvas de aprendizado (loss vs. epochs) e comparações de séries temporais. Já a reprodutibilidade foi garantida por meio de seeds fixas, padronização de pré-processamento e documentação das configurações de treinamento.
 
 Resultados Step 1:
 
